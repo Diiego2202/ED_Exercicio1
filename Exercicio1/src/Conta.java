@@ -23,9 +23,9 @@ public class Conta {
 	
 	@Override
 	public String toString() {
-		return "{Nome: " + nome + 
-			   "| CPF: " + cpf +
-			   "| Saldo: " + saldo;
+		return "Nome: " + nome + 
+			   "\nCPF: " + cpf +
+			   "\nSaldo: " + saldo;
 	}
 	
 }

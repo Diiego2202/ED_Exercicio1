@@ -20,7 +20,7 @@ public class Processo {
 		No<Conta> n = pesquisar();
 		
 		if(n == null) {
-			JOptionPane.showMessageDialog(null, "ERRO! CPF n„o encontrado!");
+			JOptionPane.showMessageDialog(null, "ERRO! CPF n√£o encontrado!");
 		} else {
 			valor = Double.parseDouble(JOptionPane.showInputDialog("Valor do saque: R$"));
 			if(valor > n.dado.saldo) {
@@ -39,11 +39,11 @@ public class Processo {
 		No<Conta> n = pesquisar();
 		
 		if(n == null) {
-			JOptionPane.showMessageDialog(null, "ERRO! CPF n„o encontrado!");
+			JOptionPane.showMessageDialog(null, "ERRO! CPF n√£o encontrado!");
 		} else {
-			valor = Double.parseDouble(JOptionPane.showInputDialog("Valor do depÛsito: R$"));
+			valor = Double.parseDouble(JOptionPane.showInputDialog("Valor do dep√≥sito: R$"));
 			if(valor < 0) {
-				JOptionPane.showMessageDialog(null, "ERRO! Valor inv·lido!");
+				JOptionPane.showMessageDialog(null, "ERRO! Valor inv√°lido!");
 			} else {
 				n.dado.saldo += valor;
 			}
@@ -59,19 +59,17 @@ public class Processo {
 	}
 	
 	public static void imprimirConta() {
-		No<Conta> n = pesquisar();
-		if(n == null) {
-			JOptionPane.showMessageDialog(null, "ERRO! CPF n„o encontrado!");
-		} else {
-			JOptionPane.showMessageDialog(null, "Nome: " + n.dado.nome + "\nCPF: " + n.dado.cpf + "\nSaldo: R$" + n.dado.saldo);
-		}
-		
+		lista.imprimir();
 	}
 	
 	public static void removerConta() {
 		String cpf = JOptionPane.showInputDialog("Insira o CPF da conta: ");
-		Conta aux = new Conta("", cpf);
-		lista.remover(aux);
-		JOptionPane.showMessageDialog(null, "Conta encerrada!");
+		if(cpf.equals("")){
+			JOptionPane.showMessageDialog(null, "ERRO! Por favor, insira um CPF");	
+		} else{
+			Conta aux = new Conta("", cpf);
+			lista.remover(aux);
+			JOptionPane.showMessageDialog(null, "Conta encerrada!");
+		}	
 	}
 }

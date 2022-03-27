@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 
 public class Lista<T> {
 	No<T> inicio, fim;
@@ -36,7 +37,7 @@ public class Lista<T> {
 		No<T> aux = pesquisar(dado);
 		
 		if(aux == null) {
-			System.out.println("ERRO! Não foi encontado o valor informado!");
+			JOptionPane.showMessageDialog(null, "ERRO! NÃ£o foi encontado o valor informado!");
 		} else {
 			if(tamanho == 1) {
 				inicio = fim = null; 
@@ -59,11 +60,11 @@ public class Lista<T> {
 		}
 	}
 	
-	public void imprimir(T dado) {
+	public void imprimir() {
 		No<T> aux = inicio;
 		aux = inicio;
 		while(aux != null) {
-			System.out.println(aux);
+			JOptionPane.showMessageDialog(null, aux.dado);
 			aux = aux.dir;
 		}
 	}

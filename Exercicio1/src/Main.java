@@ -7,7 +7,7 @@ public class Main {
 		do {
 			opcao = Integer.parseInt(JOptionPane.showInputDialog(menu()));
 			if(opcao < 1 || opcao > 6) {
-				JOptionPane.showMessageDialog(null, "OpÁ„o inv·lida");
+				JOptionPane.showMessageDialog(null, "Op√ß√£o inv√°lida");
 			} else {
 				switch(opcao) {
 					case 1:
@@ -30,19 +30,15 @@ public class Main {
 			}
 			
 		} while(opcao != 6);
-		
-		
 	}
 	
 	public static String menu() {
 		String aux = "1. Abrir conta\n";
 		aux += "2. Realizar saque\n";
-		aux += "3. Realizar depÛsito\n";
-		aux += "4. RelatÛrio de contas\n";
+		aux += "3. Realizar dep√≥sito\n";
+		aux += "4. Relat√≥rio de contas\n";
 		aux += "5. Encerrar conta\n";
-		aux += "6. Encerrar aplicaÁ„o";
+		aux += "6. Encerrar aplica√ß√£o";
 		return aux;
 	}
-	
-	
 }
