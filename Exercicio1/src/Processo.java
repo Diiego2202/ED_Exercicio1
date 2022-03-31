@@ -63,13 +63,13 @@ public class Processo {
 	}
 	
 	public static void removerConta() {
+	
 		String cpf = JOptionPane.showInputDialog("Insira o CPF da conta: ");
 		if(cpf.equals("")){
 			JOptionPane.showMessageDialog(null, "ERRO! Por favor, insira um CPF");	
 		} else{
 			Conta aux = new Conta("", cpf);
 			lista.remover(aux);
-			JOptionPane.showMessageDialog(null, "Conta encerrada!");
 		}	
 	}
 }

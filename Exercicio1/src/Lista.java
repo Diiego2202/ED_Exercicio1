@@ -57,6 +57,7 @@ public class Lista<T> {
 				}
 			}
 			tamanho--;
+			JOptionPane.showMessageDialog(null, "REMOVIDO COM SUCESSO!");
 		}
 	}
 	

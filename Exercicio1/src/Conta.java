@@ -25,7 +25,7 @@ public class Conta {
 	public String toString() {
 		return "Nome: " + nome + 
 			   "\nCPF: " + cpf +
-			   "\nSaldo: " + saldo;
+			   "\nSaldo: " + String.format("%.2f", saldo);
 	}
 	
 }
